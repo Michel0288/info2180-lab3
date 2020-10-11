@@ -69,12 +69,7 @@ onload=function(){
                         stat.textContent="Congratulations! "+array[array.length-1]+" is the Winner!";
                         stat.className+="you-won";
                     }
-                    if(pos0!==''&&pos1!=='' && pos2!==''&&pos3!=='' && pos4!==''&&pos5!==''&&pos6!==''&&pos7!==''&&pos8!=='')
-                    {
-                        stat.textContent="It is a Draw!";
-                        stat.className+="you-won";
-                    }
-
+                    
                 }
             }
 
@@ -87,6 +82,17 @@ onload=function(){
        });
     }  
     document.querySelector('button').addEventListener('click',function(){
+        // for(let i=0;i<len;i++){
+        //     stat.classList.remove('you-won');
+        //     stat.textContent="Move your mouse over a square and click to play an X or an O.";
+        //     getsquares[i].classList.remove('X');
+        //     getsquares[i].classList.remove('O');
+        //     getsquares[i].innerHTML='';
+        //     array.splice(0,array.length);
+        //     getsquares[i].className+=('square');
+        //     getsquares[i].addEventListener('click',function(){   
+        //     },{once:true});                        
+        // }
         location.reload();
     })
 }
