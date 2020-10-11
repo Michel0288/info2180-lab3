@@ -15,11 +15,11 @@ onload=function(){
                 
                 if(currentplayer===player1){
                     currentplayer=player2;
-                    document.getElementById('board').getElementsByTagName('div')[i].className+=(' X');
+                    document.getElementById('board').getElementsByTagName('div')[i].className+=(' O');
                 }
                 else{
                     currentplayer=player1;
-                    document.getElementById('board').getElementsByTagName('div')[i].className+=(' O');
+                    document.getElementById('board').getElementsByTagName('div')[i].className+=(' X');
                 }
                 array.push(getsquares[i].innerHTML=currentplayer);
 
@@ -27,5 +27,16 @@ onload=function(){
             }
           
         },{once:true});
+        getsquares[i].addEventListener("mouseover", event => {
+            getsquares[i].className+=(' hover')
+        });
+        getsquares[i].addEventListener("mouseleave", event => {
+            getsquares[i].classList.remove('hover');
+       });
+            
+
     }  
+
+
+      
 }
