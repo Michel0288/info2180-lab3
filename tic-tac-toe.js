@@ -71,11 +71,13 @@ onload=function(){
                     }
                     if(pos0!==''&&pos1!=='' && pos2!==''&&pos3!=='' && pos4!==''&&pos5!==''&&pos6!==''&&pos7!==''&&pos8!=='')
                     {
-                        stat.textContent="It is a Tie!";
+                        stat.textContent="It is a Draw!";
+                        stat.className+="you-won";
                     }
 
                 }
             }
+
         },{once:true});
         getsquares[i].addEventListener("mouseover", event => {
             getsquares[i].className+=(' hover');
@@ -84,5 +86,7 @@ onload=function(){
             getsquares[i].classList.remove('hover');
        });
     }  
-      
+    document.querySelector('button').addEventListener('click',function(){
+        location.reload();
+    })
 }
